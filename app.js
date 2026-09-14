@@ -12,6 +12,9 @@ let tasks = [
 
 let nextId = 4;
 
+app.get('/health', (req, res)=>{
+  res.statusCode(200).send('Server working properly')
+})
 app.get('/tasks', (req, res) => {
   res.json(tasks);
 });
